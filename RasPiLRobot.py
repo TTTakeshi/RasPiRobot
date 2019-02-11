@@ -34,11 +34,13 @@ class MyThread1(threading.Thread):
         motor.ChangeDutyCycle(mid)
         time.sleep(0.5)
 
-        motor.ChangeDutyCycle(bot)
-        time.sleep(0.5)
+        for iLoop in range(5):
 
-        motor.ChangeDutyCycle(mid)
-        time.sleep(0.5)
+            motor.ChangeDutyCycle(bot)
+            time.sleep(0.5)
+
+            motor.ChangeDutyCycle(mid)
+            time.sleep(0.5)
 
 class MyThread2(threading.Thread):
     def __init__(self):
