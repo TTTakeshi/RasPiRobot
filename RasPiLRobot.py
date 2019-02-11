@@ -34,6 +34,12 @@ class MyThread1(threading.Thread):
         motor.ChangeDutyCycle(mid)
         time.sleep(0.5)
 
+        motor.ChangeDutyCycle(bot)
+        time.sleep(0.5)
+
+        motor.ChangeDutyCycle(mid)
+        time.sleep(0.5)
+
 class MyThread2(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -51,6 +57,14 @@ class MyThread2(threading.Thread):
         time.sleep(0.5)
 
         motor2.ChangeDutyCycle(bot2)
+        time.sleep(0.5)
+
+        motor2.ChangeDutyCycle(mid2)
+        time.sleep(0.5)
+
+        time.sleep(1.0)
+
+        motor2.ChangeDutyCycle(top2)
         time.sleep(0.5)
 
         motor2.ChangeDutyCycle(mid2)
