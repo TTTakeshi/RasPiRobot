@@ -17,8 +17,11 @@ bot2 = 2.5   # -90 = 0.5ms / 20ms = 2.5%
 mid2 = 7.25   #   0 = 1.45ms / 20ms = 7.25%
 top2 = 12.0  # +90 = 2.4ms / 20ms = 12.0%
 
-soundClips = pygame.mixer.Sound("R2D2-yeah.wav")
-soundClips.play()
+pygame.mixer.music.load('WALLE 4.mp3')
+pygame.mixer.music.play()
+
+soundR2D2yeah = pygame.mixer.Sound("R2D2-yeah.wav")
+soundR2D2yeah.play()
 
 class MyThread1(threading.Thread):
     def __init__(self):
