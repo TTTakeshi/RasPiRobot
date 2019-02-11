@@ -16,9 +16,8 @@ top2 = 12.0  # +90 = 2.4ms / 20ms = 12.0%
 class MyThread1(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-        self.name = "MyThread1"    
-
-     def run(self):
+        self.name = "MyThread1"
+    def run(self):
         # right arm
         gp_out = 3
         GPIO.setup(gp_out, GPIO.OUT)
@@ -39,8 +38,7 @@ class MyThread2(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
         self.name = "MyThread2"
-
-     def run(self):
+    def run(self):
         # left arm
         gp_out2 = 21
         GPIO.setup(gp_out2, GPIO.OUT)
