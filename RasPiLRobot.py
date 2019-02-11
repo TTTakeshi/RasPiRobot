@@ -34,7 +34,7 @@ class MyThread1(threading.Thread):
         motor.ChangeDutyCycle(mid)
         time.sleep(0.5)
 
-        for iLoop in range(5):
+        for iLoop in range(10):
 
             motor.ChangeDutyCycle(bot)
             time.sleep(0.5)
@@ -64,13 +64,14 @@ class MyThread2(threading.Thread):
         motor2.ChangeDutyCycle(mid2)
         time.sleep(0.5)
 
-        time.sleep(1.0)
+        for iLoop2 in range(10):
 
-        motor2.ChangeDutyCycle(top2)
-        time.sleep(0.5)
+            time.sleep(1.0)
+            motor2.ChangeDutyCycle(top2)
+            time.sleep(0.5)
 
-        motor2.ChangeDutyCycle(mid2)
-        time.sleep(0.5)
+            motor2.ChangeDutyCycle(mid2)
+            time.sleep(0.5)
 
 thread1 = MyThread1()
 thread2 = MyThread2()
