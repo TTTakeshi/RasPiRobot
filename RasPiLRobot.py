@@ -4,6 +4,8 @@ import threading
 
 GPIO.setmode(GPIO.BCM) 
 
+MAX_LOOP_NUM = 10
+
 # duty = pulse / cycle
 bot = 2.5   # -90 = 0.5ms / 20ms = 2.5%
 mid = 7.25   #   0 = 1.45ms / 20ms = 7.25%
@@ -34,7 +36,7 @@ class MyThread1(threading.Thread):
         motor.ChangeDutyCycle(mid)
         time.sleep(0.5)
 
-        for iLoop in range(10):
+        for iLoop in range(MAX_LOOP_NUM):
 
             motor.ChangeDutyCycle(bot)
             time.sleep(0.5)
@@ -64,7 +66,7 @@ class MyThread2(threading.Thread):
         motor2.ChangeDutyCycle(mid2)
         time.sleep(0.5)
 
-        for iLoop2 in range(10):
+        for iLoop2 in range(MAX_LOOP_NUM/2):
 
             time.sleep(1.0)
             motor2.ChangeDutyCycle(top2)
