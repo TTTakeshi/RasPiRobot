@@ -19,9 +19,7 @@ top2 = 12.0  # +90 = 2.4ms / 20ms = 12.0%
 
 pygame.mixer.music.load('WALLE 4.mp3')
 pygame.mixer.music.play()
-
-soundR2D2yeah = pygame.mixer.Sound("R2D2-yeah.wav")
-soundR2D2yeah.play()
+time.sleep(3)
 
 class MyThread1(threading.Thread):
     def __init__(self):
@@ -45,6 +43,9 @@ class MyThread1(threading.Thread):
         time.sleep(0.5)
 
         for iLoop in range(MAX_LOOP_NUM):
+
+            soundR2D2yeah = pygame.mixer.Sound("R2D2-yeah.wav")
+            soundR2D2yeah.play()
 
             motor.ChangeDutyCycle(bot)
             time.sleep(0.5)
@@ -75,6 +76,9 @@ class MyThread2(threading.Thread):
         time.sleep(0.5)
 
         for iLoop2 in range(MAX_LOOP_NUM/2):
+
+            soundR2D2few = pygame.mixer.Sound("sentnc10.wav")
+            soundR2D2fews.play()
 
             time.sleep(1.0)
             motor2.ChangeDutyCycle(top2)
