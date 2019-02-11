@@ -44,7 +44,7 @@ class MyThread1(threading.Thread):
 
         for iLoop in range(MAX_LOOP_NUM):
 
-            soundR2D2yeah = pygame.mixer.Sound("R2D2-yeah.wav")
+            soundR2D2yeah = pygame.mixer.Sound("R2D2-do")
             soundR2D2yeah.play()
 
             motor.ChangeDutyCycle(bot)
@@ -77,8 +77,8 @@ class MyThread2(threading.Thread):
 
         for iLoop2 in range(MAX_LOOP_NUM/2):
 
-            soundR2D2few = pygame.mixer.Sound("sentnc10.wav")
-            soundR2D2fews.play()
+            soundR2D2few = pygame.mixer.Sound("R2D2-hey-you")
+            soundR2D2few.play()
 
             time.sleep(1.0)
             motor2.ChangeDutyCycle(top2)
