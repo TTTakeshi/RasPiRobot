@@ -9,13 +9,13 @@ pygame.mixer.init()
 MAX_LOOP_NUM = 10
 
 # duty = pulse / cycle
-bot = 2.5   # -90 = 0.5ms / 20ms = 2.5%
+top = 2.5   # -90 = 0.5ms / 20ms = 2.5%
 mid = 7.25   #   0 = 1.45ms / 20ms = 7.25%
-top = 12.0  # +90 = 2.4ms / 20ms = 12.0%
+bot = 12.0  # +90 = 2.4ms / 20ms = 12.0%
 
-bot2 = 2.5   # -90 = 0.5ms / 20ms = 2.5%
+top2 = 2.5   # -90 = 0.5ms / 20ms = 2.5%
 mid2 = 7.25   #   0 = 1.45ms / 20ms = 7.25%
-top2 = 12.0  # +90 = 2.4ms / 20ms = 12.0%
+bot2 = 12.0  # +90 = 2.4ms / 20ms = 12.0%
 
 pygame.mixer.music.load('WALLE 4.mp3')
 pygame.mixer.music.play()
